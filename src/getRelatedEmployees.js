@@ -8,16 +8,12 @@ function isManager(id) {
 
 function getRelatedEmployees(managerId) {
   if (isManager(managerId)) {
-    const pessoaColaboradora = data.employees
-      .find((element) => element.id === managerId).managers;
-    const ficha = data.employees.filter((element) => element.id === pessoaColaboradora[0]);
-    console.log(pessoaColaboradora);
-    return [`${ficha[0].firstName} ${ficha[0].lastName}`];
+    const managerOf = data.employees
+      .filter((element) => element.managers.includes(managerId));
+    return managerOf.reduce((unido, atual) => unido
+      .concat(`${atual.firstName} ${atual.lastName}`), []);
   }
+  throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
 }
-
-// console.log(isManager('56d43ba3-a5a7-40f6-8dd7-cbb05082383f'));
-// console.log(getRelatedEmployees('0e7b460e-acf4-4e17-bcb3-ee472265db83'));
-console.log(data.employees[4].managers);
 
 module.exports = { isManager, getRelatedEmployees };
