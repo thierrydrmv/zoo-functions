@@ -1,9 +1,8 @@
 const data = require('../data/zoo_data');
 
 function createArray() {
-  const animais = data.species;
   const array = [];
-  animais.map((element) => {
+  data.species.map((element) => {
     for (let i = 0; i < element.residents.length - 1; i += 1) {
       if (element.residents) {
         array.push(element.name);
@@ -12,11 +11,12 @@ function createArray() {
     return array;
   });
   const arrayAnimais = array.reduce((acumulado, atual) => {
-    if (acumulado[atual] === undefined) {
-      acumulado[atual] = 1;
+    const copia = { ...acumulado };
+    if (copia[atual] === undefined) {
+      copia[atual] = 1;
     }
-    acumulado[atual] += 1;
-    return acumulado;
+    copia[atual] += 1;
+    return copia;
   }, {});
   return arrayAnimais;
 }
