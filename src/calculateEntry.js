@@ -1,5 +1,3 @@
-const { company } = require('faker/lib/locales/en');
-const en = require('faker/lib/locales/en');
 const data = require('../data/zoo_data');
 
 function createArray(array) {
