@@ -40,8 +40,17 @@ describe('Testes da função getOpeningHours', () => {
     const param = () => getOpeningHours('Sunday', '09:66-AM');
     expect(param).toThrow(new Error('The minutes must be between 0 and 59'));
   });
-  it('se for passado dois parâmetros (Saturday e 09:66-AM)', () => {
-    const param = getOpeningHours('Saturday', '09:00-PM');
-    expect(param).toEqual('The zoo is open');
+  it('se for passado dois parâmetros (Saturday e 09:66-PM)', () => {
+    const param = getOpeningHours();
+    const exp = {
+      Tuesday: { open: 8, close: 6 },
+      Wednesday: { open: 8, close: 6 },
+      Thursday: { open: 10, close: 8 },
+      Friday: { open: 10, close: 8 },
+      Saturday: { open: 8, close: 10 },
+      Sunday: { open: 8, close: 8 },
+      Monday: { open: 0, close: 0 },
+    };
+    expect(param).toEqual(exp);
   });
 });
