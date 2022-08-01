@@ -40,17 +40,3 @@ describe('Testes da função HandlerElephants', () => {
     expect(param).toEqual(exp);
   });
 });
-
-// {
-//   id: 'bb2a76d8-5fe3-4d03-84b7-dba9cfc048b5',
-//   name: 'elephants',
-//   popularity: 5,
-//   location: 'NW',
-//   availability: [ 'Friday', 'Saturday', 'Sunday', 'Tuesday' ],
-//   residents: [
-//     { name: 'Ilana', sex: 'female', age: 11 },
-//     { name: 'Orval', sex: 'male', age: 15 },
-//     { name: 'Bea', sex: 'female', age: 12 },
-//     { name: 'Jefferson', sex: 'male', age: 4 }
-//   ]
-// }
