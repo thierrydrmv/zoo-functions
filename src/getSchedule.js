@@ -23,6 +23,7 @@ function monday(dayOfWeek) {
 }
 function week() {
   const dayOfWeek = Object.keys(hours);
+  // const result = dayOfWeek.map((element) => scheduleObj(element));
   const Tues = scheduleObj(dayOfWeek[0]);
   const Wednes = scheduleObj(dayOfWeek[1]);
   const Thurs = scheduleObj(dayOfWeek[2]);
@@ -31,6 +32,9 @@ function week() {
   const Sun = scheduleObj(dayOfWeek[5]);
   const Mon = monday(dayOfWeek[6]);
   const array = { ...Tues, ...Wednes, ...Thurs, ...Fri, ...Satur, ...Sun, ...Mon };
+  // result.pop();
+  // result.push(Mon);
+  // result.sort();
   return array;
 }
 
@@ -49,5 +53,6 @@ function getSchedule(scheduleTarget) {
   }
   return week();
 }
+console.log(week());
 
 module.exports = getSchedule;

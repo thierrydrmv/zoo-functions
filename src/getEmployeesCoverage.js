@@ -31,16 +31,8 @@ function createObj(id) {
 
 function arrayAllEmployees() {
   const employees = data.employees.map((element) => element.firstName);
-  const Nigel = [createObj({ x: employees[0] })];
-  const Burl = [createObj({ x: employees[1] })];
-  const Ola = [createObj({ x: employees[2] })];
-  const Wil = [createObj({ x: employees[3] })];
-  const Step = [createObj({ x: employees[4] })];
-  const Shar = [createObj({ x: employees[5] })];
-  const Ardith = [createObj({ x: employees[6] })];
-  const Emery = [createObj({ x: employees[7] })];
-  const array = Nigel.concat(Burl, Ola, Wil, Step, Shar, Ardith, Emery);
-  return array;
+  const result = employees.map((element) => createObj({ x: element }));
+  return result;
 }
 
 function getEmployeesCoverage(person) {
@@ -52,5 +44,7 @@ function getEmployeesCoverage(person) {
     return createObj(person);
   }
 }
+
+console.log(arrayAllEmployees());
 
 module.exports = getEmployeesCoverage;
