@@ -1,9 +1,7 @@
 const data = require('../data/zoo_data');
 
 function isManager(id) {
-  const ids = data.employees.map((element) => element.id);
-  const [, manager1, manager2,, manager3] = ids;
-  return ids.some(() => id === manager1 || id === manager2 || id === manager3);
+  return data.employees.some((manager) => manager.managers.includes(id));
 }
 
 function getRelatedEmployees(managerId) {
