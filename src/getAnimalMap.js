@@ -149,8 +149,4 @@ function getAnimalMap(options) {
   return objDirectionNamesGenericSorted(options);
 }
 
-console.log(locationFemaleSorted('lions'));
-
-// console.log(locationSort('lions'));
-
 module.exports = getAnimalMap;

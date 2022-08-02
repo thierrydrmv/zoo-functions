@@ -41,6 +41,4 @@ function calculateEntry(array) {
   return parseFloat(arrayfinal.reduce((total, atual) => total + atual).toFixed(2));
 }
 
-console.log(calculateEntry([{ name: 'asdas', age: 5 }, { name: 'asdas', age: 50 }]));
-
 module.exports = { calculateEntry, countEntrants };

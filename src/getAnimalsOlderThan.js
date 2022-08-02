@@ -6,6 +6,4 @@ function getAnimalsOlderThan(animal, age) {
   return filtro.every((element, index) => element.residents[index].age > age);
 }
 
-console.log(getAnimalsOlderThan('tigers', 10));
-
 module.exports = getAnimalsOlderThan;

@@ -13,6 +13,5 @@ function getEmployeeByName(employeeName) {
   });
   return resultado;
 }
-console.log(getEmployeeByName('Nelson'));
 
 module.exports = getEmployeeByName;

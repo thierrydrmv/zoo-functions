@@ -35,8 +35,4 @@ function countAnimals(animal) {
   }
 }
 
-// console.log(countAnimals());
-
-console.log(countAnimals());
-
 module.exports = countAnimals;
