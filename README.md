@@ -6,7 +6,7 @@
 
 The project **Zoo Functions** have several functions implemented to meet the proposed requirements and/or unit tests to ensure that the implementations of the functions are correct.
 
-## 🚀 Build With
+## 🚀 Built With
 
 [![Javascript][Javascript]][Javascript-url]
 
